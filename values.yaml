@@ -9,7 +9,7 @@ deployment:
   name: nodejs
   image:
     repository: marcoglorioso/nodejs-app-aroldev
-    tag: "63"
+    tag: "13"
     imagePullPolicy: IfNotPresent
 
 # This is for the secretes for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
