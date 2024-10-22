@@ -1,10 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.deployment.name }}-dp
+  name: {{ .Values.deployment.name }}--dp
   labels:
     {{- include "nodejs-infra.labels" . | nindent 4 }}
 spec:
+  revisionHistoryLimit: 0
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.deployment.replicaCount }}
   {{- end }}
